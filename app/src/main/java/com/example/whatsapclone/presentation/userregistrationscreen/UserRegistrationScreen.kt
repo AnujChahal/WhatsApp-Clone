@@ -39,11 +39,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.whatsapclone.R
 
 @Composable
-@Preview(showSystemUi = true)
-fun UserRegistrationScreen() {
+//@Preview(showSystemUi = true)
+fun UserRegistrationScreen(navController: NavHostController) {
     var expanded by remember { mutableStateOf(false) }
     var selectedCountry by remember { mutableStateOf("India") }
     var countryCode by remember { mutableStateOf("+91") }
@@ -179,7 +180,9 @@ fun UserRegistrationScreen() {
             )
             Spacer(modifier = Modifier.height(24.dp))
             Button(
-                onClick = {},
+                onClick = {
+                    navController.navigate("home_screen")
+                },
                 shape = RoundedCornerShape(6.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = colorResource(R.color.dark_green))
             ) {

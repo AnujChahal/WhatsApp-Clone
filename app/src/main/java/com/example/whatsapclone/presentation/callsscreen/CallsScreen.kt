@@ -1,7 +1,6 @@
 package com.example.whatsapclone.presentation.callsscreen
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,10 +12,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -31,21 +26,17 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.whatsapclone.R
 import com.example.whatsapclone.presentation.bottomnavigation.BottomNavigation
-import com.example.whatsapclone.presentation.homescreen.ChatDesign
-import com.example.whatsapclone.presentation.homescreen.ChatDesignModel
-import com.example.whatsapclone.presentation.updatescreen.ChannelsToFollow
-import com.example.whatsapclone.presentation.updatescreen.ChannelsToFollowModel
 import com.example.whatsapclone.presentation.updatescreen.FollowedChannel
 import com.example.whatsapclone.presentation.updatescreen.FollowedChannelModel
 
 @Composable
-@Preview(showSystemUi = true)
-fun CallsScreen() {
+//@Preview(showSystemUi = true)
+fun CallsScreen(navController: NavHostController) {
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(
@@ -63,7 +54,7 @@ fun CallsScreen() {
             }
         },
         bottomBar = {
-            BottomNavigation()
+            BottomNavigation(navController)
         }
     ) { innerPadding ->
         Column(modifier = Modifier.padding(innerPadding)) {

@@ -30,14 +30,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.whatsapclone.R
 import com.example.whatsapclone.presentation.bottomnavigation.BottomNavigation
 import com.example.whatsapclone.presentation.homescreen.ChatDesign
 import com.example.whatsapclone.presentation.homescreen.ChatDesignModel
 
 @Composable
-@Preview(showSystemUi = true)
-fun UpdateScreen() {
+//@Preview(showSystemUi = true)
+fun UpdateScreen(navController: NavHostController) {
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(
@@ -55,7 +56,7 @@ fun UpdateScreen() {
             }
         },
         bottomBar = {
-            BottomNavigation()
+            BottomNavigation(navController)
         }
     ) { innerPadding ->
         Column(modifier = Modifier.padding(innerPadding)) {

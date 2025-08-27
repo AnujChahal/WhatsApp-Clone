@@ -4,13 +4,17 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.example.whatsapclone.presentation.callsscreen.CallsScreen
+import com.example.whatsapclone.presentation.communityscreen.CommunityScreen
+import com.example.whatsapclone.presentation.homescreen.HomeScreen
+import com.example.whatsapclone.presentation.splashscreen.SplashScreen
+import com.example.whatsapclone.presentation.updatescreen.UpdateScreen
+import com.example.whatsapclone.presentation.userregistrationscreen.UserRegistrationScreen
 import com.example.whatsapclone.ui.theme.WhatsApCloneTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +23,21 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WhatsApCloneTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                val navController = rememberNavController()
+                AppNavHost(navController)
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    WhatsApCloneTheme {
-        Greeting("Android")
+fun AppNavHost(navController: NavHostController) {
+    NavHost(navController = navController, startDestination = "splash") {
+        composable("splash") { SplashScreen(navController) }
+        composable("user_registration") { UserRegistrationScreen(navController) }
+        composable("home_screen") { HomeScreen(navController) }
+        composable("update_screen") { UpdateScreen(navController) }
+        composable("community_screen") { CommunityScreen(navController) }
+        composable("call_screen") { CallsScreen(navController) }
     }
 }

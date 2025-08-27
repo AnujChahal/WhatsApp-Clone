@@ -1,5 +1,6 @@
 package com.example.whatsapclone.presentation.bottomnavigation
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,11 +20,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.example.whatsapclone.R
 
 @Composable
-@Preview(showSystemUi = true)
-fun BottomNavigation() {
+//@Preview(showSystemUi = true)
+fun BottomNavigation(navController: NavHostController) {
     BottomAppBar(
         tonalElevation = 12.dp,
         containerColor = Color.White
@@ -33,8 +35,10 @@ fun BottomNavigation() {
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Column(
-                modifier = Modifier.padding(horizontal = 16.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
+                modifier = Modifier
+                    .padding(horizontal = 16.dp)
+                    .clickable {navController.navigate("chatScreen")},
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Icon(
                     painter = painterResource(id = R.drawable.chat_icon),
@@ -48,7 +52,9 @@ fun BottomNavigation() {
                 )
             }
             Column(
-                modifier = Modifier.padding(horizontal = 16.dp),
+                modifier = Modifier
+                    .padding(horizontal = 16.dp)
+                    .clickable {navController.navigate("update_Screen")},
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Icon(
@@ -63,7 +69,9 @@ fun BottomNavigation() {
                 )
             }
             Column(
-                modifier = Modifier.padding(horizontal = 16.dp),
+                modifier = Modifier
+                    .padding(horizontal = 16.dp)
+                    .clickable {navController.navigate("community_Screen")},
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Icon(
@@ -78,7 +86,9 @@ fun BottomNavigation() {
                 )
             }
             Column(
-                modifier = Modifier.padding(horizontal = 16.dp),
+                modifier = Modifier
+                    .padding(horizontal = 16.dp)
+                    .clickable {navController.navigate("call_Screen")},
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Icon(
