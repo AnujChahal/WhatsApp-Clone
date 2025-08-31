@@ -9,12 +9,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.whatsapclone.presentation.callsscreen.CallsScreen
-import com.example.whatsapclone.presentation.communityscreen.CommunityScreen
-import com.example.whatsapclone.presentation.homescreen.HomeScreen
-import com.example.whatsapclone.presentation.splashscreen.SplashScreen
-import com.example.whatsapclone.presentation.updatescreen.UpdateScreen
-import com.example.whatsapclone.presentation.userregistrationscreen.UserRegistrationScreen
+import com.example.whatsapclone.ViewUI.callsscreen.CallsScreen
+import com.example.whatsapclone.ViewUI.communityscreen.CommunityScreen
+import com.example.whatsapclone.ViewUI.homescreen.HomeScreen
+import com.example.whatsapclone.ViewUI.splashscreen.SplashScreen
+import com.example.whatsapclone.ViewUI.updatescreen.UpdateScreen
+import com.example.whatsapclone.ViewUI.userregistrationscreen.UserRegistrationScreen
 import com.example.whatsapclone.ui.theme.WhatsApCloneTheme
 
 class MainActivity : ComponentActivity() {

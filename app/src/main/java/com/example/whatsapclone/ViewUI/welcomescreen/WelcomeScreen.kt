@@ -1,4 +1,4 @@
-package com.example.whatsapclone.presentation.welcomescreen
+package com.example.whatsapclone.ViewUI.welcomescreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

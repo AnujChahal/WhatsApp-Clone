@@ -1,4 +1,4 @@
-package com.example.whatsapclone.presentation.homescreen
+package com.example.whatsapclone.Model
 
 data class ChatDesignModel(
     val image: Int,

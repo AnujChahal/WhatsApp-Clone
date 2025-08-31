@@ -1,4 +1,4 @@
-package com.example.whatsapclone.presentation.communityscreen
+package com.example.whatsapclone.ViewUI.communityscreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.whatsapclone.R
-import com.example.whatsapclone.presentation.bottomnavigation.BottomNavigation
+import com.example.whatsapclone.ViewUI.bottomnavigation.BottomNavigation
 
 @Composable
 //@Preview(showSystemUi = true)

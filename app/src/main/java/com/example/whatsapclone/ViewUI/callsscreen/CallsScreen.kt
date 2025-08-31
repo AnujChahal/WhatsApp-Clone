@@ -1,4 +1,4 @@
-package com.example.whatsapclone.presentation.callsscreen
+package com.example.whatsapclone.ViewUI.callsscreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -30,9 +30,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.whatsapclone.R
-import com.example.whatsapclone.presentation.bottomnavigation.BottomNavigation
-import com.example.whatsapclone.presentation.updatescreen.FollowedChannel
-import com.example.whatsapclone.presentation.updatescreen.FollowedChannelModel
+import com.example.whatsapclone.ViewUI.bottomnavigation.BottomNavigation
+import com.example.whatsapclone.ViewUI.updatescreen.FollowedChannel
+import com.example.whatsapclone.Model.FollowedChannelModel
 
 @Composable
 //@Preview(showSystemUi = true)

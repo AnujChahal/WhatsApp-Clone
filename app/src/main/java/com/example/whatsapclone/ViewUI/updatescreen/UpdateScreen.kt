@@ -1,4 +1,4 @@
-package com.example.whatsapclone.presentation.updatescreen
+package com.example.whatsapclone.ViewUI.updatescreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -15,7 +15,6 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
@@ -23,41 +22,28 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.whatsapclone.Model.ChannelsToFollowModel
+import com.example.whatsapclone.Model.FollowedChannelModel
 import com.example.whatsapclone.R
-import com.example.whatsapclone.presentation.bottomnavigation.BottomNavigation
-import com.example.whatsapclone.presentation.homescreen.ChatDesign
-import com.example.whatsapclone.presentation.homescreen.ChatDesignModel
+import com.example.whatsapclone.ViewUI.bottomnavigation.BottomNavigation
+import com.example.whatsapclone.ViewUI.glassui.GlassFloatingActionButton
 
 @Composable
 //@Preview(showSystemUi = true)
 fun UpdateScreen(navController: NavHostController) {
     Scaffold(
         floatingActionButton = {
-            FloatingActionButton(
-                onClick = { /*TODO*/ },
-                containerColor = colorResource(R.color.light_green),
-                modifier = Modifier.size(65.dp),
-                contentColor = Color.White
-            ) {
-                Icon(
-                    painterResource(id = R.drawable.camera),
-                    contentDescription = null,
-                    modifier = Modifier.size(28.dp),
-                    tint = Color.Black
-                )
+            GlassFloatingActionButton {
+                TODO()
             }
         },
-        bottomBar = {
-            BottomNavigation(navController)
-        }
+        bottomBar = { BottomNavigation(navController) }
     ) { innerPadding ->
         Column(modifier = Modifier.padding(innerPadding)) {
             Spacer(modifier = Modifier.height(16.dp))
@@ -121,14 +107,11 @@ fun UpdateScreen(navController: NavHostController) {
                 //Status Row
                 item {
                     LazyRow {
-                        items(15) {
-                            ChatDesign(
-                                chatDesignModel = ChatDesignModel(
-                                    R.drawable.salmank,
-                                    name = "Salman Khan",
-                                    time = "10:00 AM",
-                                    message = "Hello"
-                                )
+                        items(6) {
+                            StatusRowUI(
+                                painter = painterResource(id = R.drawable.hrithik_roshan),
+                                contentDescription = "",
+                                title = "Hrithik Roshan",
                             )
                         }
                     }
@@ -183,7 +166,7 @@ fun UpdateScreen(navController: NavHostController) {
                         )
                     )
                 }
-                item{
+                item {
                     Text(
                         text = "Find channels to follow",
                         fontSize = 16.sp,
@@ -202,7 +185,7 @@ fun UpdateScreen(navController: NavHostController) {
                         )
                     )
                 }
-                item{
+                item {
                     Button(
                         onClick = {},
                         colors = ButtonDefaults.buttonColors(
@@ -210,11 +193,13 @@ fun UpdateScreen(navController: NavHostController) {
                                 R.color.transparent_white
                             )
                         ),
-                        modifier = Modifier.padding(horizontal = 10.dp).border(
-                            width = 1.dp,
-                            color = colorResource(R.color.Grey),
-                            shape = RoundedCornerShape(40.dp) // match button shape
-                        ),
+                        modifier = Modifier
+                            .padding(horizontal = 10.dp)
+                            .border(
+                                width = 1.dp,
+                                color = colorResource(R.color.Grey),
+                                shape = RoundedCornerShape(40.dp) // match button shape
+                            ),
                         shape = RoundedCornerShape(40.dp)
                     ) {
                         Text(

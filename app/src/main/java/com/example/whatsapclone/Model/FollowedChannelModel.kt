@@ -1,4 +1,4 @@
-package com.example.whatsapclone.presentation.updatescreen
+package com.example.whatsapclone.Model
 
 data class FollowedChannelModel (
     val followedChannelImage: Int,

@@ -1,4 +1,4 @@
-package com.example.whatsapclone.presentation.homescreen
+package com.example.whatsapclone.ViewUI.homescreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -30,8 +30,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.whatsapclone.Model.ChatDesignModel
 import com.example.whatsapclone.R
-import com.example.whatsapclone.presentation.bottomnavigation.BottomNavigation
+import com.example.whatsapclone.ViewUI.bottomnavigation.BottomNavigation
 
 @Composable
 //@Preview(showSystemUi = true)

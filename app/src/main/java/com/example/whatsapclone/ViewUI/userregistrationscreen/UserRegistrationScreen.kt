@@ -1,4 +1,4 @@
-package com.example.whatsapclone.presentation.userregistrationscreen
+package com.example.whatsapclone.ViewUI.userregistrationscreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -27,6 +27,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -36,10 +37,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.whatsapclone.Network.fetchCountry
 import com.example.whatsapclone.R
 
 @Composable
@@ -49,12 +50,8 @@ fun UserRegistrationScreen(navController: NavHostController) {
     var selectedCountry by remember { mutableStateOf("India") }
     var countryCode by remember { mutableStateOf("+91") }
     var phoneNumber by remember { mutableStateOf("") }
-    val countryList = listOf(
-        "India" to "+91",
-        "USA" to "+1",
-        "UK" to "+44",
-        "UAE" to "+971"
-    )
+    val countryList by remember { mutableStateOf<List<Pair<String, String>>>(emptyList())}
+
     Column(
         modifier = Modifier
             .fillMaxSize()
