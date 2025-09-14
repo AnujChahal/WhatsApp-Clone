@@ -1,4 +1,8 @@
+<<<<<<< HEAD:app/src/main/java/com/example/whatsapclone/ViewUI/updatescreen/StatusRowUI.kt
 package com.example.whatsapclone.ViewUI.updatescreen
+=======
+package com.example.whatsapclone.presentation.updatescreen
+>>>>>>> db6384c0b08b5fd4f003931fd5e9c7f01c998b11:app/src/main/java/com/example/whatsapclone/presentation/updatescreen/StatusRowUI.kt
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
