@@ -11,10 +11,7 @@ activityCompose = "1.10.1"
 composeBom = "2025.08.01"
 navigationCompose = "2.9.3"
 foundation = "1.9.0"
-<<<<<<< HEAD
 ktor = "3.2.3"
-=======
->>>>>>> db6384c0b08b5fd4f003931fd5e9c7f01c998b11
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,16 +30,12 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 androidx-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
-<<<<<<< HEAD
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
 ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 
-# ...
-=======
->>>>>>> db6384c0b08b5fd4f003931fd5e9c7f01c998b11
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
